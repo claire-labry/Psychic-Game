@@ -4,7 +4,7 @@ var alaphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm'
 //this is where wins, losses, guesses left, and guessed letters will be stored.
 var wins = 0;
 var losses = 0;
-var guessesLeft = 9;
+var guessesLeft = 10;
 var guessedLetters= [];
 
 
@@ -21,7 +21,7 @@ document.onkeyup = function(event) {
     if (userGuess === computerChoice){
         wins++;
         guessesLeft = 10;
-        guessesLetters = [];
+        guessedLetters = [];
 
         alert("Why yes, you've won this round. You're destined to be a fortune teller!")
 

@@ -1,27 +1,51 @@
 body {
-    position: relative;
-  background-image: url("../images/psychic-stock-image.jpg");
+  position: relative;
+  background-color: #85856E;
   background-size: cover;
-  height: 50%;
   text-align: center;
-  margin-bottom: 0;
-  z-index: 1;
+  margin: 0;
+ 
+}
+
+h1{
+  color: #C7AEA7;
+  font-size: 50px;
+  font-family: 'Creepster', cursive;
+
+}
+
+#image{
+  width: 50%;
+  border-radius: 25px;
+}
+
+.container{
+  background-color: #6D180A;
+  font-family: 'Creepster', cursive;
+  background-position: center right;
+  width: 80%;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 300px;
+  border: solid 5px #6D180A;
+  border-radius: 25px;
 }
 
 p {
 
-    color: red;
+    color: #C7AEA7;
     font-size: 30px;
-    font-family: 'Arapey', serif;
+    font-family: 'Creepster', cursive;
   }
 
-  footer {
+  .mainFooter {
 
-    color: white;
+    color: #C7AEA7;
     font-size: 30px;
-    font-family: 'Arapey', serif;
-    background-color:black;
-    border-top: red 5px solid;
+    font-family: 'Creepster', cursive;
+    background-color: #6D180A;
+    border-top: #110503 solid;
     text-align: center;
     position: fixed;
     width:100%;
