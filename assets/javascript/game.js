@@ -16,8 +16,11 @@ var computerChoice = alaphabet[Math.floor(Math.random() * alaphabet.length)];
 // this is the function when a user presses a key
 document.onkeyup = function(event) {
     var userGuess = event.key;
-    guessedLetters.push(userGuess);
-    
+
+    if (alaphabet.indexOf(userGuess) !== -1 ){
+
+        guessedLetters.push(userGuess);
+
     if (userGuess === computerChoice){
         wins++;
         guessesLeft = 10;
@@ -35,7 +38,7 @@ document.onkeyup = function(event) {
 
         alert ("YOU ARE NOT A SOOTHSAYER! ATTEMPT AGAIN!")
     }
-   
+}
     document.getElementById("wins").innerHTML = "Wins: " + wins;
     document.getElementById("losses").innerHTML = "Losses: " + losses;
     document.getElementById("guessesLeft").innerHTML = "Guesses Left: " + guessesLeft;
