@@ -33,22 +33,24 @@ var wins = 0;
 var losses = 0;
 var guessesLeft = 10;
 var guessedLetters = [];
+var computerChoice;
 
 // Restarts the game
 
 var restart = function () {
   guessesLeft = 10;
   guessedLetters = [];
-  var computerChoice = alaphabet[Math.floor(Math.random() * alaphabet.length)];
+  computerChoice = alaphabet[Math.floor(Math.random() * alaphabet.length)];
   console.log(computerChoice);
 };
 //this generates a random number
-var computerChoice = alaphabet[Math.floor(Math.random() * alaphabet.length)];
+computerChoice = alaphabet[Math.floor(Math.random() * alaphabet.length)];
 console.log(computerChoice);
 
 // this is the function when a user presses a key
 document.onkeyup = function (event) {
   var userGuess = event.key;
+  userGuess = userGuess.toLowerCase();
 
   if (alaphabet.indexOf(userGuess) !== -1) {
     guessedLetters.push(userGuess);
@@ -69,7 +71,6 @@ document.onkeyup = function (event) {
     losses++;
     guessesLeft = 10;
     guessedLetters = [];
-    restart();
 
     alert('YOU ARE NOT A SOOTHSAYER! ATTEMPT AGAIN!');
   }
